@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F6181A02-D702-4CE1-B735-BDA363BBC5B4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Blocks", "Building Blocks", "{A79B329B-B5DE-45D0-A37E-498A641EBEFC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{A79B329B-B5DE-45D0-A37E-498A641EBEFC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{13CF7FC5-899E-4BC4-8D57-0F630615CB58}"
 EndProject
@@ -17,15 +17,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{ED1AA43A-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C9A57CBC-7A2F-436B-AEAA-060886D33361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financial.Services.Application", "src\Financial.Services.Application\Financial.Services.Application.csproj", "{7242CE99-09FC-49D0-AB09-1ABB3ED4DC4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financial.Services.Application", "src\Financial.Services.Application\Financial.Services.Application.csproj", "{7242CE99-09FC-49D0-AB09-1ABB3ED4DC4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financial.Services.Core", "src\Financial.Services.Core\Financial.Services.Core.csproj", "{E720729A-7A4B-4634-A5E8-EEF682430BFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financial.Services.Core", "src\Financial.Services.Core\Financial.Services.Core.csproj", "{E720729A-7A4B-4634-A5E8-EEF682430BFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financial.Services.Domain", "src\Financial.Services.Domain\Financial.Services.Domain.csproj", "{03CC6952-81DB-43A0-9E41-DAB1A671D28D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financial.Services.Domain", "src\Financial.Services.Domain\Financial.Services.Domain.csproj", "{03CC6952-81DB-43A0-9E41-DAB1A671D28D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financial.Services.Infrastructure", "src\Financial.Services.Infrastructure\Financial.Services.Infrastructure.csproj", "{E3C14840-BD93-4831-8CFA-2976271E4EE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financial.Services.Infrastructure", "src\Financial.Services.Infrastructure\Financial.Services.Infrastructure.csproj", "{E3C14840-BD93-4831-8CFA-2976271E4EE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financial.Services.Api", "src\Financial.Services.Api\Financial.Services.Api.csproj", "{8F912E4E-6CDF-48F7-99F1-3E250B5F7D3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financial.Services.Api", "src\Financial.Services.Api\Financial.Services.Api.csproj", "{8F912E4E-6CDF-48F7-99F1-3E250B5F7D3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
