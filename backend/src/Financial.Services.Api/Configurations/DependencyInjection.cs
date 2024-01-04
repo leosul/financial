@@ -1,7 +1,5 @@
 ﻿using Financial.Services.Core.Communication.Mediator;
-using Financial.Services.Core.Data.EventSourcing;
-using Financial.Services.Core.Messages.CommonMessages.Notifications;
-using MediatR;
+using Financial.Services.Core.Notifications;
 
 namespace Financial.Services.Api.Configurations;
 
@@ -17,9 +15,7 @@ public static class DependencyInjection
     private static void Application(IServiceCollection services)
     {
         services.AddScoped<IMediatorHandler, MediatorHandler>();
-        services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
-        services.AddSingleton<IEventStoreService, EventStoreService>();
-        services.AddSingleton<IEventSourcingRepository, EventSourcingRepository>();
+        services.AddScoped<INotificator, Notificator>();
     }
 
     private static void Repository(IServiceCollection services)

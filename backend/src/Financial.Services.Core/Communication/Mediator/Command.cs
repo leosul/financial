@@ -2,16 +2,15 @@
 using FluentValidation.Results;
 using MediatR;
 
-namespace Financial.Services.Core.Communication.Mediator
-{
-    public abstract class Command : Message, IRequest<bool>
-    {
-        public DateTime Timestamp { get; private set; }
-        public ValidationResult ValidationResult { get; set; }
+namespace Financial.Services.Core.Communication.Mediator;
 
-        protected Command()
-        {
-            Timestamp = DateTime.Now;
-        }
+public abstract class Command : Message, IRequest<ValidationResult>
+{
+    public DateTime Timestamp { get; private set; }
+    public ValidationResult ValidationResult { get; set; }
+
+    protected Command()
+    {
+        Timestamp = DateTime.Now;
     }
 }

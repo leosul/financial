@@ -1,36 +1,19 @@
-﻿using Financial.Services.Core.Data.EventSourcing;
-using Financial.Services.Core.Messages.CommonMessages.DomainEvents;
-using Financial.Services.Core.Messages.CommonMessages.Notifications;
+﻿using FluentValidation.Results;
 using MediatR;
 
-namespace Financial.Services.Core.Communication.Mediator
+namespace Financial.Services.Core.Communication.Mediator;
+
+public class MediatorHandler(IMediator mediator) : IMediatorHandler
 {
-    public class MediatorHandler(IMediator mediator,
-                                 IEventSourcingRepository eventSourcingRepository) : IMediatorHandler
+    private readonly IMediator _mediator = mediator;
+
+    public async Task PublishEvent<T>(T TEvent) where T : Event
     {
-        private readonly IMediator _mediator = mediator;
-        private readonly IEventSourcingRepository _eventSourcingRepository = eventSourcingRepository;
+        await _mediator.Publish(TEvent);
+    }
 
-        public async Task<bool> SendCommand<T>(T comando) where T : Command
-        {
-            return await _mediator.Send(comando);
-        }
-
-        public async Task PublishEvent<T>(T evento) where T : Event
-        {
-            await _mediator.Publish(evento);
-            await _eventSourcingRepository.SaveEvent(evento);
-
-        }
-
-        public async Task PublishNotification<T>(T notification) where T : DomainNotification
-        {
-            await _mediator.Publish(notification);
-        }
-
-        public async Task PublishDomainEvent<T>(T notification) where T : DomainEvent
-        {
-            await _mediator.Publish(notification);
-        }
+    public async Task<ValidationResult> SendCommand<T>(T TCommand) where T : Command
+    {
+        return await _mediator.Send(TCommand);
     }
 }
